@@ -20,15 +20,15 @@ docker build -t dvwassl:latest .
 docker run -d -p 443:443 dvwassl:latest
 ```
 
-## Custom SSL certificate
+## Custom SSL certificate and key
 
-Generate the certificate:
+The image comes with pre-generated SSL certificate and key. In order to generate new ones use the following container:
 
 ```bash
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365 -nodes
 ```
 
-Run the container:
+Then, run the container:
 
 ```bash
 docker run -d -p 443:443 -v $(pwd)/cert.pem:/etc/apache2/cert.pem -v $(pwd)/key.pem:/etc/apache2/key.pem dvwassl:latest
