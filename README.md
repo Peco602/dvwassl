@@ -1,4 +1,5 @@
 ![Push](https://github.com/Peco602/dvwassl/actions/workflows/push.yml/badge.svg)
+[![Mentioned in awesome-docker](https://awesome.re/mentioned-badge.svg)](https://github.com/veggiemonk/awesome-docker)
 
 # SSL-enabled Damn Vulnerable Web App
 
